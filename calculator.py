@@ -32,6 +32,12 @@ def divide(x, y):
     return x / y
 
 
+#trig stuff
+
+def sin(x):
+    return math.sin(math.radians(x))
+
+
 
 
 
@@ -53,8 +59,9 @@ while True: # loop created for next calculations
     print("5.Factorial")
     print("6.Square Root")
     print("7.Power")
+    print("8.Sine Values")
 
-    choice = input("Enter choice (1/2/3/4/5/6/7): ")
+    choice = input("Enter choice (1/2/3/4/5/6/7/8): ")
 
     if choice == '7':
         try:
@@ -92,6 +99,14 @@ while True: # loop created for next calculations
                     print(num1, "/", num2, "=", divide(num1, num2))
         except ValueError:
             print("Invalid input. Please enter a number.")
+    
+    elif choice == '8':
+        try:
+            sineNumber = float(input("enter the number you want the sine value of >"))
+            print("sine value of", sineNumber, "is", sin(sineNumber))
+        except ValueError:
+            print("Invalid input, please enter a number")
+
 
     else:
         print("invalid input.")
