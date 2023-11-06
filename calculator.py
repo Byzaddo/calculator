@@ -1,5 +1,6 @@
 import math # imported library for function
 
+import tkinter 
 #===============
 # Sub-Programs
 #===============
@@ -31,11 +32,31 @@ def multiply(x, y):
 def divide(x, y):
     return x / y
 
+def abs(x):
+    return math.fabs(x)
+
 
 #trig stuff
 
 def sin(x):
     return math.sin(math.radians(x))
+
+def cos(x):
+    return math.cos(math.radians(x))
+
+def tan(x):
+    return math.tan(math.radians(x))
+
+
+def sind(x):
+    return math.sin(math.degrees(x))
+
+def cosd(x):
+    return math.cos(math.degrees(x))
+
+def tand(x):
+    return math.tan(math.degrees(x))
+
 
 
 
@@ -59,9 +80,12 @@ while True: # loop created for next calculations
     print("5.Factorial")
     print("6.Square Root")
     print("7.Power")
-    print("8.Sine Values")
+    print("8.Sine Values (Radians)")
+    print("9.Cos Values (radians)")
+    print("10.Tan Values (radians)")
+    print("11.Absolute Value")
 
-    choice = input("Enter choice (1/2/3/4/5/6/7/8): ")
+    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11): ")
 
     if choice == '7':
         try:
@@ -100,10 +124,20 @@ while True: # loop created for next calculations
         except ValueError:
             print("Invalid input. Please enter a number.")
     
-    elif choice == '8':
+    elif choice in ('8', '9', '10', '11' ):
         try:
-            sineNumber = float(input("enter the number you want the sine value of >"))
-            print("sine value of", sineNumber, "is", sin(sineNumber))
+            if choice == '8':
+             sineNumber = float(input("enter the number you want the sine value of >"))
+             print("sine value of", sineNumber, "is", sin(sineNumber))
+            elif choice == '9':
+                cosNumber = float(input("enter the number you want the cos value of > "))
+                print("cosine value of", cosNumber, "is", cos(cosNumber))
+            elif choice == '10':
+                tanNumber = float(input("enter the number you want the tan value of >"))
+                print("The tan value of", tanNumber, "is", tan(tanNumber))
+            elif choice == '11':
+                absolVal = float(input("enter the number you want the absolutr value of >"))
+                print("the absolute value of", absolVal, "is", abs(absolVal))
         except ValueError:
             print("Invalid input, please enter a number")
 
