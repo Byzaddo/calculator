@@ -80,9 +80,9 @@ while True: # loop created for next calculations
     print("5.Factorial")
     print("6.Square Root")
     print("7.Power")
-    print("8.Sine Values (Radians)")
-    print("9.Cos Values (radians)")
-    print("10.Tan Values (radians)")
+    print("8.Sine Values (degrees)")
+    print("9.Cos Values (degrees)")
+    print("10.Tan Values (degrees)")
     print("11.Absolute Value")
 
     choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11): ")
@@ -128,13 +128,13 @@ while True: # loop created for next calculations
         try:
             if choice == '8':
              sineNumber = float(input("enter the number you want the sine value of >"))
-             print("sine value of", sineNumber, "is", sin(sineNumber))
+             print("sine value of", sineNumber, "is", sind(sineNumber))
             elif choice == '9':
                 cosNumber = float(input("enter the number you want the cos value of > "))
-                print("cosine value of", cosNumber, "is", cos(cosNumber))
+                print("cosine value of", cosNumber, "is", cosd(cosNumber))
             elif choice == '10':
                 tanNumber = float(input("enter the number you want the tan value of >"))
-                print("The tan value of", tanNumber, "is", tan(tanNumber))
+                print("The tan value of", tanNumber, "is", tand(tanNumber))
             elif choice == '11':
                 absolVal = float(input("enter the number you want the absolutr value of >"))
                 print("the absolute value of", absolVal, "is", abs(absolVal))
