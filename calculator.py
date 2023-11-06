@@ -35,6 +35,15 @@ def divide(x, y):
 def abs(x):
     return math.fabs(x)
 
+def log10(x):
+    return math.log10(x)
+
+def loge(x):
+    return math.log(x)
+
+def log2(x):
+    return math.log2(x)
+
 
 #trig stuff
 
@@ -84,6 +93,7 @@ while True: # loop created for next calculations
     print("9.Cos Values (degrees)")
     print("10.Tan Values (degrees)")
     print("11.Absolute Value")
+    print("12.logarithm value")
 
     choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11): ")
 
@@ -95,6 +105,21 @@ while True: # loop created for next calculations
             print("Answer =", result)
         except ValueError:
             print("Invalid input. Please enter a number.")
+
+    elif choice == '12':
+         try:
+          base = input("Enter the base (10/e/2): ")
+          xValue = float(input("Enter the value to calculate logarithm: "))
+          if base == '10':
+              print("The answer is", log10(xValue))
+          elif base == 'e':
+              print("The answer is", loge(xValue))
+          elif base == '2':
+              print("The answer is", log2(xValue))
+          else:
+              print("Invalid base. Please enter '10', 'e', or '2'.")
+         except ValueError:
+          print("Invalid input. Please enter a number.")
 
     elif choice in ('5', '6'):
         try:
