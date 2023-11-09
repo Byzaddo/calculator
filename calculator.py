@@ -1,6 +1,6 @@
 import math # imported library for function
 
-import tkinter 
+import time
 #===============
 # Sub-Programs
 #===============
@@ -99,8 +99,10 @@ while True: # loop created for next calculations
     # Selection
     # ===============
 
-    print("---")
+    print("------ Lord Farquaadulator ------")
+    time.sleep(1)
     print("Select operation.")
+    time.sleep(1)
     print("1.Add")
     print("2.Subtract")
     print("3.Multiply")
