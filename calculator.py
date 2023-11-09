@@ -45,6 +45,10 @@ def log2(x):
     return math.log2(x)
 
 
+def crcArea(x):
+    return math.pi * (x**2)
+
+
 #trig stuff
 
 def sin(x):
@@ -66,9 +70,23 @@ def cosd(x):
 def tand(x):
     return math.tan(math.degrees(x))
 
+def tanadj(opposite, tan_deg):
+    adjacentt = opposite / tand(tan_deg)
+    return adjacentt
 
+def cosadj(hypotenuse, cos_deg):
+    adjacentc = cosd * hypotenuse
+    return adjacentc
 
+#Constants
 
+pi = math.pi
+
+tau = math.tau
+
+e = math.e
+
+sqrt2 = "square root of 2, approx 1.41421356237309504880168872420969807856967187537694807317667973799"
 
 
 #===============
@@ -81,6 +99,7 @@ while True: # loop created for next calculations
     # Selection
     # ===============
 
+    print("---")
     print("Select operation.")
     print("1.Add")
     print("2.Subtract")
@@ -94,8 +113,10 @@ while True: # loop created for next calculations
     print("10.Tan Values (degrees)")
     print("11.Absolute Value")
     print("12.logarithm value")
+    print("13.constants")
+    print("14.calculate Area of Circle")
 
-    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11): ")
+    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12/13/14): ")
 
     if choice == '7':
         try:
@@ -105,6 +126,22 @@ while True: # loop created for next calculations
             print("Answer =", result)
         except ValueError:
             print("Invalid input. Please enter a number.")
+
+    elif choice == '13':
+        try:
+            print("pi =", pi)
+            print("tau =", tau)
+            print("e =", e)
+            print("square root of 2 =", sqrt2)
+        except ValueError:
+            print("invalid input, please enter a number")
+
+    elif choice == '14':
+        try:
+         r = float(input(("enter the radius of the circle> ")))
+         print("the area of the circle is,", crcArea(r))
+        except ValueError:
+            print("invalid input. please enter as number")
 
     elif choice == '12':
          try:
@@ -173,4 +210,16 @@ while True: # loop created for next calculations
     next_calculation = input("Do you want to perform another calculation? (yes/no): ") # Ask next calculation
     if next_calculation.lower() == "no":
         break # if answer no end the program
+
+
+
+
+
+
+    # inspired by the Shrekulator
+    # 
+    #
+    #
+    #
+
 
