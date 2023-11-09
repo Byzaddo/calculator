@@ -176,6 +176,8 @@ while True: # loop created for next calculations
             num2 = float(input("Enter second number: "))
             if choice == '1':
                 print(num1, "+", num2, "=", add(num1, num2))
+                if add(num1, num2) == 69:
+                    print("""""")
             elif choice == '2':
                 print(num1, "-", num2, "=", subtract(num1, num2))
             elif choice == '3':
@@ -198,7 +200,7 @@ while True: # loop created for next calculations
                 print("cosine value of", cosNumber, "is", cosd(cosNumber))
             elif choice == '10':
                 tanNumber = float(input("enter the number you want the tan value of >"))
-                print("The tan value of", tanNumber, "is", tand(tanNumber))
+                print("Lord Farquaad says the tan value of", tanNumber, "is", tand(tanNumber))
             elif choice == '11':
                 absolVal = float(input("enter the number you want the absolutr value of >"))
                 print("the absolute value of", absolVal, "is", abs(absolVal))
@@ -211,7 +213,26 @@ while True: # loop created for next calculations
 
     next_calculation = input("Do you want to perform another calculation? (yes/no): ") # Ask next calculation
     if next_calculation.lower() == "no":
-        break # if answer no end the program
+            print("lord farquaad has been slain by shrek")
+            time.sleep(1)
+            print("""⢀⡴⠑⡄⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠸⡇⠀⠿⡀⠀⠀⠀⣀⡴⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠑⢄⣠⠾⠁⣀⣄⡈⠙⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⢀⡀⠁⠀⠀⠈⠙⠛⠂⠈⣿⣿⣿⣿⣿⠿⡿⢿⣆⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⢀⡾⣁⣀⠀⠴⠂⠙⣗⡀⠀⢻⣿⣿⠭⢤⣴⣦⣤⣹⠀⠀⠀⢀⢴⣶⣆ 
+⠀⠀⢀⣾⣿⣿⣿⣷⣮⣽⣾⣿⣥⣴⣿⣿⡿⢂⠔⢚⡿⢿⣿⣦⣴⣾⠁⠸⣼⡿ 
+⠀⢀⡞⠁⠙⠻⠿⠟⠉⠀⠛⢹⣿⣿⣿⣿⣿⣌⢤⣼⣿⣾⣿⡟⠉⠀⠀⠀⠀⠀ 
+⠀⣾⣷⣶⠇⠀⠀⣤⣄⣀⡀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
+⠀⠉⠈⠉⠀⠀⢦⡈⢻⣿⣿⣿⣶⣶⣶⣶⣤⣽⡹⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠉⠲⣽⡻⢿⣿⣿⣿⣿⣿⣿⣷⣜⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣶⣮⣭⣽⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠛⠉ """)
+            break # if answer no end the program
+  
+       
 
 
 
@@ -223,5 +244,4 @@ while True: # loop created for next calculations
     #
     #
     #
-
-
+    #
