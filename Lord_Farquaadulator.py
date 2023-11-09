@@ -75,7 +75,7 @@ def tanadj(opposite, tan_deg):
     return adjacentt
 
 def cosadj(hypotenuse, cos_deg):
-    adjacentc = cosd * hypotenuse
+    adjacentc = cosd(cos_deg) * hypotenuse
     return adjacentc
 
 #Constants
