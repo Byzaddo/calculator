@@ -89,6 +89,24 @@ e = math.e
 sqrt2 = "square root of 2, approx 1.41421356237309504880168872420969807856967187537694807317667973799"
 
 
+#pythogrean theorem a**2 + b**2 = c**2
+
+def findhyp(a, b):
+    csqrt = (a**2) + (b**2)
+    c = sqrt(csqrt)
+    return c
+
+def findadj(a, c):
+    bsqrt = (c**2) - (a**2)
+    b = sqrt(bsqrt)
+    return b
+
+def findopp(b, c):
+    asqrt = (c**2) - (b**2)
+    a = sqrt(asqrt)
+    return a 
+
+
 #===============
 # Main-Program
 #===============
@@ -130,7 +148,7 @@ while True: # loop created for next calculations
     print("13.constants")
     time.sleep(1)
     print("14.calculate Area of Circle")
-    time.sleep(3)
+    time.sleep(1)
 
     choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12/13/14): ")
 
@@ -280,4 +298,9 @@ while True: # loop created for next calculations
 ⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠛⠉ """)
             break # if answer no end the program
+
+
+
+
+        
   
