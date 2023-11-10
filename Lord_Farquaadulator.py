@@ -91,8 +91,8 @@ sqrt2 = "square root of 2, approx 1.41421356237309504880168872420969807856967187
 
 #pythogrean theorem a**2 + b**2 = c**2
 
-def findhyp(a, b):
-    csqrt = (a**2) + (b**2)
+def findhyp(x, y):
+    csqrt = (x**2) + (y**2)
     c = sqrt(csqrt)
     return c
 
@@ -149,6 +149,12 @@ while True: # loop created for next calculations
     time.sleep(1)
     print("14.calculate Area of Circle")
     time.sleep(1)
+    print("15.Find the hypotenuse")
+    time.sleep(1)
+    print("16.Find the adjacent")
+    time.sleep(1)
+    print("17. Find the opposite")
+    time.sleep(2)
 
     choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12/13/14): ")
 
@@ -256,6 +262,23 @@ while True: # loop created for next calculations
                     print(num1, "/", num2, "=", divide(num1, num2))
         except ValueError:
             print("Invalid input. Please enter a number.")
+
+    elif choice in ('15', '16', '17'):
+        try:
+            if choice == '15':
+                a = float(input("enter the length of adjacent side "))
+                b = float(input("enter the length of the opposite side "))
+                print("the length of the hypotenuse is", findhyp(a, b))
+            elif choice == '16':
+                b = float(input("enter the length of the opposite side "))
+                c = float(input("enter the length of hypotenus side"))
+                print("the length of the adjacent side is", findadj(b, c))
+            elif choice == '17':
+                a = float(input("enter the length of the adjacent side"))
+                c = float(input("enter the length of the hypotenuse"))
+                print("the length of the opposite side is ", findopp(a, c))
+        except ValueError:
+            print("Invalid input. please enter a number")
     
     elif choice in ('8', '9', '10', '11' ):
         try:
