@@ -324,6 +324,10 @@ while True: # loop created for next calculations
 
 
 
+        #inspired by the Shrekulator
+
+
+
 
         
   
