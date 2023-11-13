@@ -107,56 +107,105 @@ def findopp(b, c):
     return a 
 
 
+print("------ Lord Farquaadulator ------")
+
 #===============
 # Main-Program
 #===============
-
+delay = True
 while True: # loop created for next calculations
+
+    
+
+    if delay:
+        print("Select operation.")
+        time.sleep(1)
+        print("1.Add")
+        time.sleep(1)
+        print("2.Subtract")
+        time.sleep(1)
+        print("3.Multiply")
+        time.sleep(1)
+        print("4.Divide")
+        time.sleep(1)
+        print("5.Factorial")
+        time.sleep(1)
+        print("6.Square Root")
+        time.sleep(1)
+        print("7.Power")
+        time.sleep(1)
+        print("8.Sine Values (degrees)")
+        time.sleep(1)
+        print("9.Cos Values (degrees)")
+        time.sleep(1)
+        print("10.Tan Values (degrees)")
+        time.sleep(1)
+        print("11.Absolute Value")
+        time.sleep(1)
+        print("12.logarithm value")
+        time.sleep(1)
+        print("13.constants")
+        time.sleep(1)
+        print("14.calculate Area of Circle")
+        time.sleep(1)
+        print("15.Find the hypotenuse")
+        time.sleep(1)
+        print("16.Find the adjacent")
+        time.sleep(1)
+        print("17. Find the opposite")
+        time.sleep(2)
+    else:
+        
+        print("Select operation.")
+       
+        print("1.Add")
+      
+        print("2.Subtract")
+        
+        print("3.Multiply")
+        
+        print("4.Divide")
+       
+        print("5.Factorial")
+       
+        print("6.Square Root")
+      
+        print("7.Power")
+     
+        print("8.Sine Values (degrees)")
+        
+        print("9.Cos Values (degrees)")
+        
+        print("10.Tan Values (degrees)")
+        
+        print("11.Absolute Value")
+        
+        print("12.logarithm value")
+        
+        print("13.constants")
+        
+        print("14.calculate Area of Circle")
+        
+        print("15.Find the hypotenuse")
+        
+        print("16.Find the adjacent")
+        
+        print("17. Find the opposite")
+        
+    
+
+    
+
+        
+        
 
     # ===============
     # Selection
     # ===============
+    
 
-    print("------ Lord Farquaadulator ------")
-    time.sleep(1)
-    print("Select operation.")
-    time.sleep(1)
-    print("1.Add")
-    time.sleep(1)
-    print("2.Subtract")
-    time.sleep(1)
-    print("3.Multiply")
-    time.sleep(1)
-    print("4.Divide")
-    time.sleep(1)
-    print("5.Factorial")
-    time.sleep(1)
-    print("6.Square Root")
-    time.sleep(1)
-    print("7.Power")
-    time.sleep(1)
-    print("8.Sine Values (degrees)")
-    time.sleep(1)
-    print("9.Cos Values (degrees)")
-    time.sleep(1)
-    print("10.Tan Values (degrees)")
-    time.sleep(1)
-    print("11.Absolute Value")
-    time.sleep(1)
-    print("12.logarithm value")
-    time.sleep(1)
-    print("13.constants")
-    time.sleep(1)
-    print("14.calculate Area of Circle")
-    time.sleep(1)
-    print("15.Find the hypotenuse")
-    time.sleep(1)
-    print("16.Find the adjacent")
-    time.sleep(1)
-    print("17. Find the opposite")
-    time.sleep(2)
 
-    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12/13/14): ")
+    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17): ")
 
     if choice == '7':
         try:
@@ -303,24 +352,12 @@ while True: # loop created for next calculations
 
     next_calculation = input("Do you want to perform another calculation? (yes/no): ") # Ask next calculation
     if next_calculation.lower() == "no":
-            print("lord farquaad has been slain by shrek")
-            time.sleep(1)
-            print("""⢀⡴⠑⡄⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
-⠸⡇⠀⠿⡀⠀⠀⠀⣀⡴⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
-⠀⠀⠀⠀⠑⢄⣠⠾⠁⣀⣄⡈⠙⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀ 
-⠀⠀⠀⠀⢀⡀⠁⠀⠀⠈⠙⠛⠂⠈⣿⣿⣿⣿⣿⠿⡿⢿⣆⠀⠀⠀⠀⠀⠀⠀ 
-⠀⠀⠀⢀⡾⣁⣀⠀⠴⠂⠙⣗⡀⠀⢻⣿⣿⠭⢤⣴⣦⣤⣹⠀⠀⠀⢀⢴⣶⣆ 
-⠀⠀⢀⣾⣿⣿⣿⣷⣮⣽⣾⣿⣥⣴⣿⣿⡿⢂⠔⢚⡿⢿⣿⣦⣴⣾⠁⠸⣼⡿ 
-⠀⢀⡞⠁⠙⠻⠿⠟⠉⠀⠛⢹⣿⣿⣿⣿⣿⣌⢤⣼⣿⣾⣿⡟⠉⠀⠀⠀⠀⠀ 
-⠀⣾⣷⣶⠇⠀⠀⣤⣄⣀⡀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
-⠀⠉⠈⠉⠀⠀⢦⡈⢻⣿⣿⣿⣶⣶⣶⣶⣤⣽⡹⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
-⠀⠀⠀⠀⠀⠀⠀⠉⠲⣽⡻⢿⣿⣿⣿⣿⣿⣿⣷⣜⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
-⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣶⣮⣭⣽⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀ 
-⠀⠀⠀⠀⠀⠀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀ 
-⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀ 
-⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠛⠉ """)
-            break # if answer no end the program
+        break # if answer no end the program
+    elif next_calculation.lower() == "yes":
+        delay = False
+        continue
+
+
 
 
 
