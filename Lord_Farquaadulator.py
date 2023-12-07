@@ -1,11 +1,15 @@
 import math # imported library for function
-
+import tkinter
+from tkinter import *
 import time
+from tkinter import Tk
+
+root = Tk()
 #===============
 # Sub-Programs
 #===============
 
-
+ 
 def add(x, y):
     return x + y
 
@@ -153,7 +157,10 @@ while True: # loop created for next calculations
         print("16.Find the adjacent")
         time.sleep(1)
         print("17. Find the opposite")
+        time.sleep(1)
+        print("18.Area of a shape")
         time.sleep(2)
+
     else:
         
         print("Select operation.")
@@ -191,6 +198,8 @@ while True: # loop created for next calculations
         print("16.Find the adjacent")
         
         print("17. Find the opposite")
+
+        print("18.Area of a shape")
         
     
 
@@ -205,7 +214,7 @@ while True: # loop created for next calculations
     
 
 
-    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17): ")
+    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17/18): ")
 
     if choice == '7':
         try:
@@ -231,6 +240,32 @@ while True: # loop created for next calculations
          print("the area of the circle is,", crcArea(r))
         except ValueError:
             print("invalid input. please enter as number")
+
+    elif choice == '18':
+        try:
+            shape = input("enter the 2d shape you want the area of (square/rectangle/triangle/trapezium/parallelogram)")
+            if shape == 'square':
+                ar = float(input("enter the side length of the square"))
+                print("the area of the square is ", ar**2 )
+            elif shape == 'rectangle':
+                ar1 = float(input("enter the long side length "))
+                ax = float(input("enter the shorter side length "))
+                print("the area of the rectangle is ", ax*ar1)
+            elif shape == 'triangle':
+                basev = float(input("enter the base length of the triangle"))
+                height = float(input("enter the height of the triangle"))
+                print("the area of the triangle is ", 0.5*(basev*height))
+            elif shape == 'trapezium':
+                bb = float(input("enter the length of the base of the trapezium"))
+                high = float(input("enter the height of the trapezium"))
+                arb = float(input("enter the length of the top side length"))
+                print("the area of the trapezium is ", 0.5*(arb+bb)*high)
+            elif shape == 'parallelogram':
+                arbt = float(input("enter the base of the parallelogram"))
+                heightrf = float(input("enter the height of the parallegoram"))
+                print("the area of the parallelogram is", arbt*heightrf)
+        except ValueError:
+            print("Invalid input, pleasee enter a number")
 
     elif choice == '12':
          try:
