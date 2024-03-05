@@ -1,15 +1,23 @@
 import math # imported library for function
-import tkinter
-from tkinter import *
+import tkinter as tk
 import time
-from tkinter import Tk
-
-root = Tk()
+import difflib
 #===============
 # Sub-Programs
 #===============
 
- 
+class ShapeCalculator:
+    def __init__(self, shape_list):
+        self.shape_list = shape_list
+
+    def suggest_shape(self, input_shape):
+        suggestions = difflib.get_close_matches(input_shape, self.shape_list, n=3, cutoff=0.8)
+        return suggestions
+
+shape_list = ["circle", "square", "rectangle", "triangle", "pentagon", "hexagon", "octagon", "trapezium", "parallelogram"]
+
+calculator = ShapeCalculator(shape_list)
+
 def add(x, y):
     return x + y
 
@@ -20,7 +28,7 @@ def sqrt(x):
 
 def factorial(n):
     if n == 0:
-        return 1
+        return 1                #RECURSIVE FUNCTION !!!
     else:
         return n * factorial(n - 1)
 
@@ -56,23 +64,23 @@ def crcArea(x):
 #trig stuff
 
 def sin(x):
-    return math.sin(math.radians(x))
+    return math.sin(x)
 
 def cos(x):
-    return math.cos(math.radians(x))
+    return math.cos(x)
 
 def tan(x):
-    return math.tan(math.radians(x))
+    return math.tan(x)
 
 
 def sind(x):
-    return math.sin(math.degrees(x))
+    return math.sin(math.radians(x))
 
 def cosd(x):
-    return math.cos(math.degrees(x))
+    return math.cos(math.radians(x))
 
 def tand(x):
-    return math.tan(math.degrees(x))
+    return math.tan(math.radians(x))
 
 def tanadj(opposite, tan_deg):
     adjacentt = opposite / tand(tan_deg)
@@ -81,6 +89,21 @@ def tanadj(opposite, tan_deg):
 def cosadj(hypotenuse, cos_deg):
     adjacentc = cosd(cos_deg) * hypotenuse
     return adjacentc
+
+
+
+#derivatives of trig functions
+def dsind(x):
+    return cosd(x)
+
+def dcosd(x):
+    return -sind(x)
+
+def dtand(x):
+    return 1/cosd(x)**2
+
+
+
 
 #Constants
 
@@ -91,7 +114,6 @@ tau = math.tau
 e = math.e
 
 sqrt2 = "square root of 2, approx 1.41421356237309504880168872420969807856967187537694807317667973799"
-
 
 #pythogrean theorem a**2 + b**2 = c**2
 
@@ -109,6 +131,7 @@ def findopp(b, c):
     asqrt = (c**2) - (b**2)
     a = sqrt(asqrt)
     return a 
+
 
 
 print("------ Lord Farquaadulator ------")
@@ -159,7 +182,10 @@ while True: # loop created for next calculations
         print("17. Find the opposite")
         time.sleep(1)
         print("18.Area of a shape")
+        time.sleep(1)
+        print("19.Natural Logarithm value")
         time.sleep(2)
+
 
     else:
         
@@ -200,6 +226,8 @@ while True: # loop created for next calculations
         print("17. Find the opposite")
 
         print("18.Area of a shape")
+
+        print("19.Natural Logarithm value")
         
     
 
@@ -214,7 +242,7 @@ while True: # loop created for next calculations
     
 
 
-    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17/18): ")
+    choice = input("Enter choice (1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17/18/19): ")
 
     if choice == '7':
         try:
@@ -239,33 +267,44 @@ while True: # loop created for next calculations
          r = float(input(("enter the radius of the circle> ")))
          print("the area of the circle is,", crcArea(r))
         except ValueError:
-            print("invalid input. please enter as number")
+            print("invalid input. please enter a number")
 
     elif choice == '18':
         try:
-            shape = input("enter the 2d shape you want the area of (square/rectangle/triangle/trapezium/parallelogram)")
-            if shape == 'square':
-                ar = float(input("enter the side length of the square"))
-                print("the area of the square is ", ar**2 )
-            elif shape == 'rectangle':
-                ar1 = float(input("enter the long side length "))
-                ax = float(input("enter the shorter side length "))
-                print("the area of the rectangle is ", ax*ar1)
-            elif shape == 'triangle':
-                basev = float(input("enter the base length of the triangle"))
-                height = float(input("enter the height of the triangle"))
-                print("the area of the triangle is ", 0.5*(basev*height))
-            elif shape == 'trapezium':
-                bb = float(input("enter the length of the base of the trapezium"))
-                high = float(input("enter the height of the trapezium"))
-                arb = float(input("enter the length of the top side length"))
-                print("the area of the trapezium is ", 0.5*(arb+bb)*high)
-            elif shape == 'parallelogram':
-                arbt = float(input("enter the base of the parallelogram"))
-                heightrf = float(input("enter the height of the parallegoram"))
-                print("the area of the parallelogram is", arbt*heightrf)
+            shape = input("Enter the 2D shape you want the area of (square/rectangle/triangle/trapezium/parallelogram): ")
+            corrected_shape = shape.lower()
+            if corrected_shape not in shape_list:
+                suggestions = calculator.suggest_shape(corrected_shape)
+                if suggestions:
+                    print(f"Did you mean one of these shapes? {', '.join(suggestions)}")
+                    user_choice = input("Type 'yes' to use the suggested shape, or anything else to try again: ").lower()
+                    if user_choice == 'yes':
+                        corrected_shape = suggestions[0]
+            if corrected_shape == 'square':
+                side_length = float(input("Enter the side length of the square: "))
+                print("The area of the square is", side_length ** 2)
+            elif corrected_shape == 'rectangle':
+                length = float(input("Enter the length of the rectangle: "))
+                width = float(input("Enter the width of the rectangle: "))
+                print("The area of the rectangle is", length * width)
+            elif corrected_shape == 'triangle':
+                base = float(input("Enter the base length of the triangle: "))
+                height = float(input("Enter the height of the triangle: "))
+                print("The area of the triangle is", 0.5 * base * height)
+            elif corrected_shape == 'trapezium':
+                top_length = float(input("Enter the top side length of the trapezium: "))
+                bottom_length = float(input("Enter the bottom side length of the trapezium: "))
+                height_trap = float(input("Enter the height of the trapezium: "))
+                area_trap = 0.5 * (top_length + bottom_length) * height_trap
+                print(f"The area of the trapezium is {area_trap}")
+            elif corrected_shape == 'parallelogram':
+                side_length = float(input("Enter the length of one side of the parallelogram: "))
+                height_para = float(input("Enter the height of the parallelogram: "))
+                print("The area of the parallelogram is", side_length * height_para)
+            else:
+                raise ValueError('Invalid Shape')
         except ValueError:
-            print("Invalid input, pleasee enter a number")
+            print("Invalid input. Please enter a number.")
 
     elif choice == '12':
          try:
@@ -355,7 +394,7 @@ while True: # loop created for next calculations
                 print("the length of the hypotenuse is", findhyp(a, b))
             elif choice == '16':
                 b = float(input("enter the length of the opposite side "))
-                c = float(input("enter the length of hypotenus side"))
+                c = float(input("enter the length of hypotenuse side"))
                 print("the length of the adjacent side is", findadj(b, c))
             elif choice == '17':
                 a = float(input("enter the length of the adjacent side"))
